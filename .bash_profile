@@ -36,20 +36,8 @@ push() { pushbranch "$@" ;}
 alias mongostart="mongod --fork --config /usr/local/var/mongodb/mongod.conf"
 alias be="bundle exec"
 
-### Project startup
-alias queryss="cd /Users/marekbiczysko/Projects/query_server/query_server && SB_HOST=localhost:3002 be thin start -p 5000 -R config.ru"
-alias spas="cd /Users/marekbiczysko/Projects/spabreaks/ && ./script/server -p 3002"
-
-##ssh servers
-alias mstage="ssh-add ~/.ssh/github && ssh marekbiczysko@m-staging.yourgolftravel.com"
-alias tunels="ssh-add ~/.ssh/github && ssh -L 2000:localhost:5984 marekbiczysko@m-staging.yourgolftravel.com"
-alias db1spa="ssh-add ~/.ssh/github && ssh marekbiczysko@db1.spabreaks.com"
-alias sales="ssh-add ~/.ssh/github && ssh marekbiczysko@ygtus101004"
 alias pryc="bundle exec pry -r ./config/environment"
-alias elastic="/usr/local/elasticsearch/bin/elasticsearch -f -p /usr/local/var/run/elasticsearch.pid"
 alias sshkey="ssh-add ~/.ssh/github"
-
-alias varnishstart="sudo varnishd -f /usr/local/Cellar/varnish/3.0.3/etc/varnish/default.vcl -s malloc,128M -T 127.0.0.1:2000 -a 10.10.10.126:8080"
 
 alias filesshow="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
 alias fileshide="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
